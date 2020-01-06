@@ -44,6 +44,9 @@ function initPlayers() {
             console.log(`NOT YET CODED IN`);
         };
 
+    } else if (userInputNum > 7) {
+        console.log(`The maximum player count is [7].`)
+        initPlayers();
     } else if (!userInputNum) {
         console.log(`Invalid input.`);
         initPlayers();
@@ -75,8 +78,13 @@ function prepareCardShoe(shuflDeck) {
     };
 
     return shuflDeck;
+    playGame();
 };
 
-function initGame() {
-    
-}
+function playGame() {
+    function dealCards(){
+        
+    }
+
+    function 
+};
