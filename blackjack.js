@@ -2,11 +2,11 @@ let userPrompt = require(`readline-sync`);
 let userInputWord = false;
 let userInputNum = false;
 let userInputYesNo = false;
-let playerDetail = {};
+let playerDetails = {};
+let dealerDetails = [];
 let playerNum = 0;
 
 let deck = [];
-let shuffledDeck = 
 
 const suits = ["of Spades", "of Hearts", "of Diamonds", "of Clubs"];
 const num = ["Ace", "King", "Queen", "Jack", "10", "9", "8", "7", "6", "5", "4", "3", "2"];
@@ -23,7 +23,7 @@ function initPlayers() {
             playerName();
             function playerName() {
                 userInputWord = userPrompt.question(`[Player ` + playerNum + `]` + ` Please input your display name: `);
-                playerDetail['Player '+ playerNum] = {name: userInputWord, hand: []};
+                playerDetails['Player '+ playerNum] = {name: userInputWord, hand: []};
 
                 if (!userInputWord) {
                     console.log(`Invalid input. Try again.`)
@@ -82,9 +82,15 @@ function prepareCardShoe(shuflDeck) {
 };
 
 function playGame() {
-    function dealCards(){
+    function dealCards() {
         
-    }
+    };
 
-    function 
+    function playerChoice() {
+
+    };
+
+    function dealerHit() {
+
+    };
 };
