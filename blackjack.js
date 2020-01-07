@@ -57,27 +57,30 @@ function initPlayers() {
 };
 
 function initDeck() {
-    for (let i = 0; i < num.length; i++) {
-        for (let a = 0; a < suits.length; a++) {
-            deck.push(num[i] + " " + suits[a]);
+    for (let x = 0; x < 8; x++) { //8 decks in a shoe
+        for (let i = 0; i < num.length; i++) {
+            for (let a = 0; a < suits.length; a++) {
+                deck.push(num[i] + " " + suits[a]);
+            };
         };
     };
 
+    console.log(deck);
     prepareCardShoe(deck);
 };
 
 function prepareCardShoe(shuflDeck) {
     let randomPos;
-    let card;
+    let randomCard;
 
-    for (x = shuflDeck.length - 1; x > 0; x --) {
+    for (x = shuflDeck.length - 1; x > 0; x--) {
         randomPos = Math.floor(Math.random() * (x + 1));
-        card = shuflDeck[x];
+        randomCard = shuflDeck[x];
         shuflDeck[x] = shuflDeck[randomPos];
-        shuflDeck[randomPos] = card;
+        shuflDeck[randomPos] = randomCard;
     };
 
-    return shuflDeck;
+    console.log(deck);
     playGame();
 };
 
@@ -91,6 +94,6 @@ function playGame() {
     };
 
     function dealerHit() {
-
+x
     };
 };
