@@ -3,7 +3,7 @@ let userInputWord = false;
 let userInputNum = false;
 let userInputYesNo = false;
 let playerDetails = {};
-let dealerDetails = [];
+let dealerDetails = {};
 let playerNum = 0;
 
 let deck = [];
@@ -23,7 +23,7 @@ function initPlayers() {
             playerName();
             function playerName() {
                 userInputWord = userPrompt.question(`[Player ` + playerNum + `]` + ` Please input your display name: `);
-                playerDetails['Player '+ playerNum] =    {name: userInputWord, hand: []};
+                playerDetails['Player '+ playerNum] = {name: userInputWord, cards: []};
 
                 if (!userInputWord) {
                     console.log(`Invalid input. Try again.`)
@@ -65,35 +65,40 @@ function initDeck() {
         };
     };
 
-    console.log(deck);
     prepareCardShoe(deck);
 };
 
 function prepareCardShoe(shuflDeck) {
     let randomPos;
-    let randomCard;
+    let card;
 
-    for (x = shuflDeck.length - 1; x > 0; x--) {
-        randomPos = Math.floor(Math.random() * (x + 1));
-        randomCard = shuflDeck[x];
-        shuflDeck[x] = shuflDeck[randomPos];
-        shuflDeck[randomPos] = randomCard;
+    for (let z = shuflDeck.length - 1; z > 0; z--) {
+        randomPos = Math.floor(Math.random() * (z + 1));
+        card = shuflDeck[z];
+        shuflDeck[z] = shuflDeck[randomPos];
+        shuflDeck[randomPos] = card;
     };
-
-    console.log(deck);
-    playGame();
+    
+    dealCards(deck);
 };
 
-function playGame() {
-    function dealCards() {
-        
-    };
+function dealCards(cardShoe) {
+    let cardCount = 0;
+    let objKey1 = Object.keys(playerDetails)[userInputNum]; //playerDetails = {player1...}
 
-    function playerChoice() {
+    console.log(cardShoe);
 
+    for (let i = 0; i < playerObj.length; i++) {
+        Object.keys(objKey1)[cards].push(cardShoe.splice(0,1))
+        cardCount += 1;
     };
+    console.log(player.card);
+};
 
-    function dealerHit() {
-x
-    };
+function playerChoice() {
+
+};
+
+function dealerHit() {
+    
 };
