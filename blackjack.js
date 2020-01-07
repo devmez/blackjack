@@ -9,7 +9,7 @@ let playerNum = 0;
 let deck = [];
 
 const suits = ["of Spades", "of Hearts", "of Diamonds", "of Clubs"];
-const num = ["Ace", "King", "Queen", "Jack", "10", "9", "8", "7", "6", "5", "4", "3", "2"];
+const num = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"];
 
 initPlayers();
 
@@ -23,7 +23,7 @@ function initPlayers() {
             playerName();
             function playerName() {
                 userInputWord = userPrompt.question(`[Player ` + playerNum + `]` + ` Please input your display name: `);
-                playerDetails['Player '+ playerNum] = {name: userInputWord, hand: []};
+                playerDetails['Player '+ playerNum] =    {name: userInputWord, hand: []};
 
                 if (!userInputWord) {
                     console.log(`Invalid input. Try again.`)
